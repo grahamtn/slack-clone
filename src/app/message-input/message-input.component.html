@@ -1,13 +1,5 @@
-<!--<div>
-    <label>name:
-      <input [(ngModel)]="messages[0].messageBody" placeholder="message">
 
-    </label>
-</div>-->
-
-<form ng-submit="submit()" ng-controller="TextController">
-  Enter text and hit enter:
-  <input type="text" ng-model="text" name="text" id = user_input/>
-  <input type="submit" id="submit" value="Submit" />
-
-</form>
+        <h1>Text Area</h1>
+        <textarea ref-textarea [(ngModel)]="textValue" rows="4"></textarea><br/>
+        <button (click)="createMessage(textarea.value)">Update Log</button>
+        <button (click)="textValue=''">Clear</button>

@@ -13,17 +13,10 @@ export class StoreMessageService {
   constructor() {
   this.userInputEle = document.getElementById("user_input");
   }
-  // createMessage(input: String){
-  //     this.newMessage = new Message(input);
-  //     this.storeMessage(this.newMessage);
-  // }
 
-  takeInput(){
-      this.newMessage = this.userInputEle;
-      this.storeMessage(this.newMessage);
-  }
   storeMessage(newMessage: String){
-      this.messages.push(newMessage);
+      let message: Message = new Message(newMessage);
+      MESSAGES.push(message);
   }
 
   getMessages(){

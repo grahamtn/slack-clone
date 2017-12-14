@@ -15,9 +15,13 @@ export class MessageInputComponent implements OnInit {
 
   }
 
+  textValue = 'initial value';
+
   ngOnInit() {
   }
 
-
+  createMessage(input: String){
+      this.storeMessageService.storeMessage(input);
+  }
 
 }

@@ -16,7 +16,7 @@ import { of } from 'rxjs/observable/of';
 export class MessageDisplayComponent implements OnInit {
 
 
-  messages: String[];
+  messages: Message[];
 
   message: Message = {
       messageBody: 'YO DUDE!'
@@ -27,8 +27,4 @@ export class MessageDisplayComponent implements OnInit {
   ngOnInit() {
   }
 
-  getMessages(): void {
-    this.storeMessageService.getMessages()
-        .subscribe(messages => this.messages = messages);
-  }
 }
